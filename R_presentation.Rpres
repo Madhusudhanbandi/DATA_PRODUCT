@@ -1,0 +1,48 @@
+R_presentation
+========================================================
+author: Madhusudhan
+date: 08AUG2016
+autosize: true
+
+Creating Data product
+========================================================
+1.Created ui.R file for weight calculation.
+2.Created server.R file to get the output.
+
+server.R code for conversion weight in pounds to kg
+========================================================
+
+wtkg <- function(Weight) Weight*0.453592
+
+shinyServer(
+  
+  function(input,output)
+    
+    {
+  
+  output$inputValuewt <- renderPrint({input$Weight})
+  
+  output$kg <- renderPrint({wtkg(input$Weight)})
+  
+  
+}
+)
+
+
+Very nice to do presentation with R
+========================================================
+With an ease you can do your presentation with R 
+
+
+
+Printing a dataset
+========================================================
+
+``` {r}
+summary(mtcars)
+```
+
+
+
+
+
